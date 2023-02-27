@@ -5,4 +5,4 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ![](./images/screenshot1.png)
 ![](./images/screenshot2.png)
 
-Live Site URL: https://siyosu.github.com
+Live Site URL: https://siyosu.github.io
