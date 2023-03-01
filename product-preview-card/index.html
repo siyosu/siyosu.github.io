@@ -35,12 +35,11 @@
       cursor: default;
     }
     .product-img{
-      width: 50%;
       border-radius: 1em 0 0 1em;
-      background: url('images/image-product-desktop.jpg');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
+    }
+    .product-img img{
+      height: 100%;
+      border-radius: 1em 0 0 1em;
     }
     .product-details{
       width: 40%;
@@ -107,23 +106,19 @@
     button:hover{
       background-color: hsl(158, 35%, 26%);
     }
-    @media (max-width:600px){
+    @media (max-width:611px){
       .container{
       width: 24em;
-      height: 80vh;
+      height: fit-content;
       background-color: var(--white-);
       border-radius: 1em;
       display: flex;
       flex-direction: column;
       position: relative;
     }
-    .product-img{
-      height: 45%;
+    .product-img img{
+      height: 100%;
       width: 100%;
-      background: url('images/image-product-mobile.jpg');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
       border-radius: 1em 1em 0 0;
     }
     .product-details{
@@ -149,7 +144,12 @@
 <body>
   <main>
     <div class="container">
-      <div class="product-img"></div>
+      <div class="product-img">
+        <picture>
+          <source srcset="images/image-product-mobile.jpg" media="(max-width: 611px)">
+          <img src="images/image-product-desktop.jpg" alt="Product Image">
+        </picture>
+      </div>
       <div class="product-details">
         <p class="spacing">Perfume</p>
         <h1>Gabrielle Essence Eau De Parfum</h1>
